@@ -75,3 +75,28 @@ Saída
 Para cada caso de teste, imprima a média ponderada dos 3 valores, conforme exemplo abaixo.
 
 
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+class Main {
+  public static void main(String[] args) {
+
+    Scanner obj = new Scanner(System.in);
+    DecimalFormat df = new DecimalFormat("#.#");
+
+    int casos = obj.nextInt();
+    double soma = 0;
+    int i = 0;
+
+    while (i < casos){
+      double nota = obj.nextDouble();
+      soma = soma + nota;
+      i++;
+    }
+    
+    double media = soma / casos;
+    System.out.println(df.format(media));
+    
+    }
+  }
+
